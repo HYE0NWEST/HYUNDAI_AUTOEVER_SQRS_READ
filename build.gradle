@@ -21,22 +21,23 @@ repositories {
 dependencies {
     // 1. Spring Web
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    // 2. Spring Data JPA
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    // 3. Spring Data MongoDB
+    // 2. Spring Data MongoDB
     implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
-    // 4. Kafka
+    // 3. Kafka
     implementation 'org.springframework.boot:spring-boot-starter-kafka'
 
-    // 5. Lombok
+    // 4. Lombok
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
-    // 6. Spring Boot DevTools
+    // 5. Spring Boot DevTools
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
-    // 7. MySQL Driver
-    runtimeOnly 'com.mysql:mysql-connector-j'
+    // 6. Jackson for JSON serialization
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+    implementation 'com.fasterxml.jackson.core:jackson-core'
 
+    // 7. Testing
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
 }
